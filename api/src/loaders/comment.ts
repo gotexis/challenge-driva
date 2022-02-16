@@ -1,11 +1,11 @@
 import DataLoader from 'dataloader'
-import { Comment } from '../models/comment'
+import { Quote } from '../models/quote'
 
 // [1, 78, 8, 9]
 export const createCommentLoader = () =>
-  new DataLoader<number, Comment>(async (commentIds) => {
-    const comments = await Comment.findByIds(commentIds as number[])
-    const commentIdToComment: Record<number, Comment> = {}
+  new DataLoader<number, Quote>(async (commentIds) => {
+    const comments = await Quote.findByIds(commentIds as number[])
+    const commentIdToComment: Record<number, Quote> = {}
     comments.forEach((u) => {
       commentIdToComment[u.id] = u
     })

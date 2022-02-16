@@ -1,7 +1,5 @@
 import { createConnection } from 'typeorm'
-import { Post } from './models/post'
-import { User } from './models/user'
-import { Comment } from './models/comment'
+import { Quote } from './models/quote'
 
 const sql = async () =>
   await createConnection({
@@ -10,7 +8,7 @@ const sql = async () =>
     logging: true,
     synchronize: process.env.NODE_ENV !== 'production',
     migrations: ['migration/*.js'],
-    entities: [Post, User, Comment],
+    entities: [Quote],
   })
 
 export default sql
