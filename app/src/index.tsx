@@ -6,6 +6,7 @@ import { Provider } from "react-redux"
 import { BaseProvider } from "./context/base"
 import { BrowserRouter } from "react-router-dom"
 import configureStore from "./store/index"
+import 'antd/dist/antd.css';
 
 export const { store } = configureStore()
 
