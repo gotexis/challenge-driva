@@ -21,7 +21,7 @@ export const createApp = async () => {
   app.use(express.urlencoded({ extended: false }))
   app.use(cookieParser())
 
-  app.use('/', router)
+  app.use('/quote', router)
 
   // error handling middleware
   app.use((e, req, res, next) => {
